@@ -1,0 +1,608 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5F89A2FD21888DF300E425C2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F89A2FC21888DF300E425C2 /* AppDelegate.swift */; };
+		5F89A2FF21888DF300E425C2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F89A2FE21888DF300E425C2 /* ViewController.swift */; };
+		5F89A30221888DF300E425C2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5F89A30021888DF300E425C2 /* Main.storyboard */; };
+		5F89A30521888DF300E425C2 /* edotfood.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5F89A30321888DF300E425C2 /* edotfood.xcdatamodeld */; };
+		5F89A30721888DF500E425C2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5F89A30621888DF500E425C2 /* Assets.xcassets */; };
+		5F89A30A21888DF500E425C2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5F89A30821888DF500E425C2 /* LaunchScreen.storyboard */; };
+		5F89A31521888DF500E425C2 /* edotfoodTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F89A31421888DF500E425C2 /* edotfoodTests.swift */; };
+		5F89A32021888DF500E425C2 /* edotfoodUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F89A31F21888DF500E425C2 /* edotfoodUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		5F89A31121888DF500E425C2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5F89A2F121888DF200E425C2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5F89A2F821888DF200E425C2;
+			remoteInfo = edotfood;
+		};
+		5F89A31C21888DF500E425C2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5F89A2F121888DF200E425C2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5F89A2F821888DF200E425C2;
+			remoteInfo = edotfood;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		5F89A2F921888DF200E425C2 /* edotfood.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = edotfood.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5F89A2FC21888DF300E425C2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		5F89A2FE21888DF300E425C2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		5F89A30121888DF300E425C2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		5F89A30421888DF300E425C2 /* edotfood.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = edotfood.xcdatamodel; sourceTree = "<group>"; };
+		5F89A30621888DF500E425C2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5F89A30921888DF500E425C2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		5F89A30B21888DF500E425C2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5F89A31021888DF500E425C2 /* edotfoodTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = edotfoodTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5F89A31421888DF500E425C2 /* edotfoodTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = edotfoodTests.swift; sourceTree = "<group>"; };
+		5F89A31621888DF500E425C2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5F89A31B21888DF500E425C2 /* edotfoodUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = edotfoodUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5F89A31F21888DF500E425C2 /* edotfoodUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = edotfoodUITests.swift; sourceTree = "<group>"; };
+		5F89A32121888DF500E425C2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5F89A2F621888DF200E425C2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5F89A30D21888DF500E425C2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5F89A31821888DF500E425C2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5F89A2F021888DF200E425C2 = {
+			isa = PBXGroup;
+			children = (
+				5F89A2FB21888DF200E425C2 /* edotfood */,
+				5F89A31321888DF500E425C2 /* edotfoodTests */,
+				5F89A31E21888DF500E425C2 /* edotfoodUITests */,
+				5F89A2FA21888DF200E425C2 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		5F89A2FA21888DF200E425C2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5F89A2F921888DF200E425C2 /* edotfood.app */,
+				5F89A31021888DF500E425C2 /* edotfoodTests.xctest */,
+				5F89A31B21888DF500E425C2 /* edotfoodUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5F89A2FB21888DF200E425C2 /* edotfood */ = {
+			isa = PBXGroup;
+			children = (
+				5F89A2FC21888DF300E425C2 /* AppDelegate.swift */,
+				5F89A2FE21888DF300E425C2 /* ViewController.swift */,
+				5F89A30021888DF300E425C2 /* Main.storyboard */,
+				5F89A30621888DF500E425C2 /* Assets.xcassets */,
+				5F89A30821888DF500E425C2 /* LaunchScreen.storyboard */,
+				5F89A30B21888DF500E425C2 /* Info.plist */,
+				5F89A30321888DF300E425C2 /* edotfood.xcdatamodeld */,
+			);
+			path = edotfood;
+			sourceTree = "<group>";
+		};
+		5F89A31321888DF500E425C2 /* edotfoodTests */ = {
+			isa = PBXGroup;
+			children = (
+				5F89A31421888DF500E425C2 /* edotfoodTests.swift */,
+				5F89A31621888DF500E425C2 /* Info.plist */,
+			);
+			path = edotfoodTests;
+			sourceTree = "<group>";
+		};
+		5F89A31E21888DF500E425C2 /* edotfoodUITests */ = {
+			isa = PBXGroup;
+			children = (
+				5F89A31F21888DF500E425C2 /* edotfoodUITests.swift */,
+				5F89A32121888DF500E425C2 /* Info.plist */,
+			);
+			path = edotfoodUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5F89A2F821888DF200E425C2 /* edotfood */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5F89A32421888DF500E425C2 /* Build configuration list for PBXNativeTarget "edotfood" */;
+			buildPhases = (
+				5F89A2F521888DF200E425C2 /* Sources */,
+				5F89A2F621888DF200E425C2 /* Frameworks */,
+				5F89A2F721888DF200E425C2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = edotfood;
+			productName = edotfood;
+			productReference = 5F89A2F921888DF200E425C2 /* edotfood.app */;
+			productType = "com.apple.product-type.application";
+		};
+		5F89A30F21888DF500E425C2 /* edotfoodTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5F89A32721888DF500E425C2 /* Build configuration list for PBXNativeTarget "edotfoodTests" */;
+			buildPhases = (
+				5F89A30C21888DF500E425C2 /* Sources */,
+				5F89A30D21888DF500E425C2 /* Frameworks */,
+				5F89A30E21888DF500E425C2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5F89A31221888DF500E425C2 /* PBXTargetDependency */,
+			);
+			name = edotfoodTests;
+			productName = edotfoodTests;
+			productReference = 5F89A31021888DF500E425C2 /* edotfoodTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		5F89A31A21888DF500E425C2 /* edotfoodUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5F89A32A21888DF500E425C2 /* Build configuration list for PBXNativeTarget "edotfoodUITests" */;
+			buildPhases = (
+				5F89A31721888DF500E425C2 /* Sources */,
+				5F89A31821888DF500E425C2 /* Frameworks */,
+				5F89A31921888DF500E425C2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5F89A31D21888DF500E425C2 /* PBXTargetDependency */,
+			);
+			name = edotfoodUITests;
+			productName = edotfoodUITests;
+			productReference = 5F89A31B21888DF500E425C2 /* edotfoodUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5F89A2F121888DF200E425C2 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1000;
+				LastUpgradeCheck = 1000;
+				ORGANIZATIONNAME = "edotmills llc";
+				TargetAttributes = {
+					5F89A2F821888DF200E425C2 = {
+						CreatedOnToolsVersion = 10.0;
+					};
+					5F89A30F21888DF500E425C2 = {
+						CreatedOnToolsVersion = 10.0;
+						TestTargetID = 5F89A2F821888DF200E425C2;
+					};
+					5F89A31A21888DF500E425C2 = {
+						CreatedOnToolsVersion = 10.0;
+						TestTargetID = 5F89A2F821888DF200E425C2;
+					};
+				};
+			};
+			buildConfigurationList = 5F89A2F421888DF200E425C2 /* Build configuration list for PBXProject "edotfood" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 5F89A2F021888DF200E425C2;
+			productRefGroup = 5F89A2FA21888DF200E425C2 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5F89A2F821888DF200E425C2 /* edotfood */,
+				5F89A30F21888DF500E425C2 /* edotfoodTests */,
+				5F89A31A21888DF500E425C2 /* edotfoodUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5F89A2F721888DF200E425C2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5F89A30A21888DF500E425C2 /* LaunchScreen.storyboard in Resources */,
+				5F89A30721888DF500E425C2 /* Assets.xcassets in Resources */,
+				5F89A30221888DF300E425C2 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5F89A30E21888DF500E425C2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5F89A31921888DF500E425C2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5F89A2F521888DF200E425C2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5F89A2FF21888DF300E425C2 /* ViewController.swift in Sources */,
+				5F89A30521888DF300E425C2 /* edotfood.xcdatamodeld in Sources */,
+				5F89A2FD21888DF300E425C2 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5F89A30C21888DF500E425C2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5F89A31521888DF500E425C2 /* edotfoodTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5F89A31721888DF500E425C2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5F89A32021888DF500E425C2 /* edotfoodUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5F89A31221888DF500E425C2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5F89A2F821888DF200E425C2 /* edotfood */;
+			targetProxy = 5F89A31121888DF500E425C2 /* PBXContainerItemProxy */;
+		};
+		5F89A31D21888DF500E425C2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5F89A2F821888DF200E425C2 /* edotfood */;
+			targetProxy = 5F89A31C21888DF500E425C2 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		5F89A30021888DF300E425C2 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5F89A30121888DF300E425C2 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		5F89A30821888DF500E425C2 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5F89A30921888DF500E425C2 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		5F89A32221888DF500E425C2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		5F89A32321888DF500E425C2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5F89A32521888DF500E425C2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = SKN23YXB4R;
+				INFOPLIST_FILE = edotfood/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.edotmills.edotfood;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		5F89A32621888DF500E425C2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = SKN23YXB4R;
+				INFOPLIST_FILE = edotfood/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.edotmills.edotfood;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		5F89A32821888DF500E425C2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = SKN23YXB4R;
+				INFOPLIST_FILE = edotfoodTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.edotmills.edotfoodTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/edotfood.app/edotfood";
+			};
+			name = Debug;
+		};
+		5F89A32921888DF500E425C2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = SKN23YXB4R;
+				INFOPLIST_FILE = edotfoodTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.edotmills.edotfoodTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/edotfood.app/edotfood";
+			};
+			name = Release;
+		};
+		5F89A32B21888DF500E425C2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = SKN23YXB4R;
+				INFOPLIST_FILE = edotfoodUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.edotmills.edotfoodUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = edotfood;
+			};
+			name = Debug;
+		};
+		5F89A32C21888DF500E425C2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = SKN23YXB4R;
+				INFOPLIST_FILE = edotfoodUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.edotmills.edotfoodUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = edotfood;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5F89A2F421888DF200E425C2 /* Build configuration list for PBXProject "edotfood" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5F89A32221888DF500E425C2 /* Debug */,
+				5F89A32321888DF500E425C2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5F89A32421888DF500E425C2 /* Build configuration list for PBXNativeTarget "edotfood" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5F89A32521888DF500E425C2 /* Debug */,
+				5F89A32621888DF500E425C2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5F89A32721888DF500E425C2 /* Build configuration list for PBXNativeTarget "edotfoodTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5F89A32821888DF500E425C2 /* Debug */,
+				5F89A32921888DF500E425C2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5F89A32A21888DF500E425C2 /* Build configuration list for PBXNativeTarget "edotfoodUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5F89A32B21888DF500E425C2 /* Debug */,
+				5F89A32C21888DF500E425C2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		5F89A30321888DF300E425C2 /* edotfood.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				5F89A30421888DF300E425C2 /* edotfood.xcdatamodel */,
+			);
+			currentVersion = 5F89A30421888DF300E425C2 /* edotfood.xcdatamodel */;
+			path = edotfood.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 5F89A2F121888DF200E425C2 /* Project object */;
+}
