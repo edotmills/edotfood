@@ -15,6 +15,13 @@
 		5F89A30A21888DF500E425C2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5F89A30821888DF500E425C2 /* LaunchScreen.storyboard */; };
 		5F89A31521888DF500E425C2 /* edotfoodTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F89A31421888DF500E425C2 /* edotfoodTests.swift */; };
 		5F89A32021888DF500E425C2 /* edotfoodUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F89A31F21888DF500E425C2 /* edotfoodUITests.swift */; };
+		5F89A32E21888EDC00E425C2 /* ResturantsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F89A32D21888EDC00E425C2 /* ResturantsVC.swift */; };
+		5F89A33021889C5100E425C2 /* Resturant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F89A32F21889C5100E425C2 /* Resturant.swift */; };
+		5F89A333218A6E0600E425C2 /* ResturantCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F89A332218A6E0600E425C2 /* ResturantCell.swift */; };
+		5F89A336218A7B7400E425C2 /* ResturantTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F89A335218A7B7400E425C2 /* ResturantTableViewController.swift */; };
+		98E38E3B26A1F2A6E43C7C82 /* Pods_edotfoodTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0853B6B57BE7BE7A7776D6F7 /* Pods_edotfoodTests.framework */; };
+		C34683896BEC454765B23775 /* Pods_edotfood.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FB0DBC8331CF51D972987E8 /* Pods_edotfood.framework */; };
+		F60179F578D5393F45E40B04 /* Pods_edotfoodUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 378694031FFB74D411D858BA /* Pods_edotfoodUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +42,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0853B6B57BE7BE7A7776D6F7 /* Pods_edotfoodTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_edotfoodTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		19EFAE73931524488E614C71 /* Pods-edotfoodUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-edotfoodUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-edotfoodUITests/Pods-edotfoodUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		378694031FFB74D411D858BA /* Pods_edotfoodUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_edotfoodUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		416FE731CE69E1FD45338FA6 /* Pods-edotfood.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-edotfood.release.xcconfig"; path = "Pods/Target Support Files/Pods-edotfood/Pods-edotfood.release.xcconfig"; sourceTree = "<group>"; };
+		4FB0DBC8331CF51D972987E8 /* Pods_edotfood.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_edotfood.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5F89A2F921888DF200E425C2 /* edotfood.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = edotfood.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5F89A2FC21888DF300E425C2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5F89A2FE21888DF300E425C2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -49,6 +61,14 @@
 		5F89A31B21888DF500E425C2 /* edotfoodUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = edotfoodUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5F89A31F21888DF500E425C2 /* edotfoodUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = edotfoodUITests.swift; sourceTree = "<group>"; };
 		5F89A32121888DF500E425C2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5F89A32D21888EDC00E425C2 /* ResturantsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResturantsVC.swift; sourceTree = "<group>"; };
+		5F89A32F21889C5100E425C2 /* Resturant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resturant.swift; sourceTree = "<group>"; };
+		5F89A332218A6E0600E425C2 /* ResturantCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResturantCell.swift; sourceTree = "<group>"; };
+		5F89A335218A7B7400E425C2 /* ResturantTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResturantTableViewController.swift; sourceTree = "<group>"; };
+		6F04C2682F6FEA8DE3C18427 /* Pods-edotfood.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-edotfood.debug.xcconfig"; path = "Pods/Target Support Files/Pods-edotfood/Pods-edotfood.debug.xcconfig"; sourceTree = "<group>"; };
+		88D03C1C7FC9B310AB5AEAFB /* Pods-edotfoodUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-edotfoodUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-edotfoodUITests/Pods-edotfoodUITests.release.xcconfig"; sourceTree = "<group>"; };
+		9B33756509DBA51639256249 /* Pods-edotfoodTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-edotfoodTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-edotfoodTests/Pods-edotfoodTests.release.xcconfig"; sourceTree = "<group>"; };
+		E460A2A3FB5572551A5D6F49 /* Pods-edotfoodTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-edotfoodTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-edotfoodTests/Pods-edotfoodTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C34683896BEC454765B23775 /* Pods_edotfood.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +84,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				98E38E3B26A1F2A6E43C7C82 /* Pods_edotfoodTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,12 +92,23 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F60179F578D5393F45E40B04 /* Pods_edotfoodUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		24C59C073BD19444ED680B22 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4FB0DBC8331CF51D972987E8 /* Pods_edotfood.framework */,
+				0853B6B57BE7BE7A7776D6F7 /* Pods_edotfoodTests.framework */,
+				378694031FFB74D411D858BA /* Pods_edotfoodUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		5F89A2F021888DF200E425C2 = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +116,8 @@
 				5F89A31321888DF500E425C2 /* edotfoodTests */,
 				5F89A31E21888DF500E425C2 /* edotfoodUITests */,
 				5F89A2FA21888DF200E425C2 /* Products */,
+				A32596284815E36C5A00F764 /* Pods */,
+				24C59C073BD19444ED680B22 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,6 +134,8 @@
 		5F89A2FB21888DF200E425C2 /* edotfood */ = {
 			isa = PBXGroup;
 			children = (
+				5F89A334218A6E0C00E425C2 /* VC */,
+				5F89A331218A6DE800E425C2 /* Cells */,
 				5F89A2FC21888DF300E425C2 /* AppDelegate.swift */,
 				5F89A2FE21888DF300E425C2 /* ViewController.swift */,
 				5F89A30021888DF300E425C2 /* Main.storyboard */,
@@ -106,6 +143,7 @@
 				5F89A30821888DF500E425C2 /* LaunchScreen.storyboard */,
 				5F89A30B21888DF500E425C2 /* Info.plist */,
 				5F89A30321888DF300E425C2 /* edotfood.xcdatamodeld */,
+				5F89A32F21889C5100E425C2 /* Resturant.swift */,
 			);
 			path = edotfood;
 			sourceTree = "<group>";
@@ -128,6 +166,36 @@
 			path = edotfoodUITests;
 			sourceTree = "<group>";
 		};
+		5F89A331218A6DE800E425C2 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				5F89A332218A6E0600E425C2 /* ResturantCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		5F89A334218A6E0C00E425C2 /* VC */ = {
+			isa = PBXGroup;
+			children = (
+				5F89A32D21888EDC00E425C2 /* ResturantsVC.swift */,
+				5F89A335218A7B7400E425C2 /* ResturantTableViewController.swift */,
+			);
+			path = VC;
+			sourceTree = "<group>";
+		};
+		A32596284815E36C5A00F764 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6F04C2682F6FEA8DE3C18427 /* Pods-edotfood.debug.xcconfig */,
+				416FE731CE69E1FD45338FA6 /* Pods-edotfood.release.xcconfig */,
+				E460A2A3FB5572551A5D6F49 /* Pods-edotfoodTests.debug.xcconfig */,
+				9B33756509DBA51639256249 /* Pods-edotfoodTests.release.xcconfig */,
+				19EFAE73931524488E614C71 /* Pods-edotfoodUITests.debug.xcconfig */,
+				88D03C1C7FC9B310AB5AEAFB /* Pods-edotfoodUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -135,9 +203,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5F89A32421888DF500E425C2 /* Build configuration list for PBXNativeTarget "edotfood" */;
 			buildPhases = (
+				84D131B5CB54F1A8DC5D8D91 /* [CP] Check Pods Manifest.lock */,
 				5F89A2F521888DF200E425C2 /* Sources */,
 				5F89A2F621888DF200E425C2 /* Frameworks */,
 				5F89A2F721888DF200E425C2 /* Resources */,
+				D790862E7468B6F6D3431FA3 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -152,6 +222,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5F89A32721888DF500E425C2 /* Build configuration list for PBXNativeTarget "edotfoodTests" */;
 			buildPhases = (
+				070FBDDB81582046398D9698 /* [CP] Check Pods Manifest.lock */,
 				5F89A30C21888DF500E425C2 /* Sources */,
 				5F89A30D21888DF500E425C2 /* Frameworks */,
 				5F89A30E21888DF500E425C2 /* Resources */,
@@ -170,6 +241,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5F89A32A21888DF500E425C2 /* Build configuration list for PBXNativeTarget "edotfoodUITests" */;
 			buildPhases = (
+				E8AB10E9620383FCD2C8B608 /* [CP] Check Pods Manifest.lock */,
 				5F89A31721888DF500E425C2 /* Sources */,
 				5F89A31821888DF500E425C2 /* Frameworks */,
 				5F89A31921888DF500E425C2 /* Resources */,
@@ -254,13 +326,96 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		070FBDDB81582046398D9698 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-edotfoodTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		84D131B5CB54F1A8DC5D8D91 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-edotfood-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D790862E7468B6F6D3431FA3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-edotfood/Pods-edotfood-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
+				"${BUILT_PRODUCTS_DIR}/CodableAlamofire/CodableAlamofire.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CodableAlamofire.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-edotfood/Pods-edotfood-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E8AB10E9620383FCD2C8B608 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-edotfoodUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		5F89A2F521888DF200E425C2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				5F89A2FF21888DF300E425C2 /* ViewController.swift in Sources */,
+				5F89A32E21888EDC00E425C2 /* ResturantsVC.swift in Sources */,
+				5F89A33021889C5100E425C2 /* Resturant.swift in Sources */,
 				5F89A30521888DF300E425C2 /* edotfood.xcdatamodeld in Sources */,
+				5F89A336218A7B7400E425C2 /* ResturantTableViewController.swift in Sources */,
+				5F89A333218A6E0600E425C2 /* ResturantCell.swift in Sources */,
 				5F89A2FD21888DF300E425C2 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -434,6 +589,7 @@
 		};
 		5F89A32521888DF500E425C2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6F04C2682F6FEA8DE3C18427 /* Pods-edotfood.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -446,12 +602,13 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.edotmills.edotfood;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		5F89A32621888DF500E425C2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 416FE731CE69E1FD45338FA6 /* Pods-edotfood.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -464,12 +621,13 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.edotmills.edotfood;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
 		5F89A32821888DF500E425C2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E460A2A3FB5572551A5D6F49 /* Pods-edotfoodTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -491,6 +649,7 @@
 		};
 		5F89A32921888DF500E425C2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9B33756509DBA51639256249 /* Pods-edotfoodTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -512,6 +671,7 @@
 		};
 		5F89A32B21888DF500E425C2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 19EFAE73931524488E614C71 /* Pods-edotfoodUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -532,6 +692,7 @@
 		};
 		5F89A32C21888DF500E425C2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 88D03C1C7FC9B310AB5AEAFB /* Pods-edotfoodUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
