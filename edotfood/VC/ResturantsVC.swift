@@ -15,8 +15,6 @@ class ResturantsVC: UIViewController, CLLocationManagerDelegate, UITableViewData
     
     var location_manager:CLLocationManager = CLLocationManager()
     var resturants:[Resturant] = []
-    var categories:[Category] = []
-    var filtered_resturants:[Resturant] = []
     var tap_gesture:UITapGestureRecognizer!
     
     @IBOutlet var resturant_tableview:UITableView!
@@ -64,122 +62,89 @@ class ResturantsVC: UIViewController, CLLocationManagerDelegate, UITableViewData
 
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation])
     {
-        let locValue:CLLocationCoordinate2D = manager.location!.coordinate
-        
         location_manager.stopUpdatingLocation()
         
         //Once we have the users location we can use the Yelp API to find local resturants.
-        find_local_resturants(lat: locValue.latitude, long: locValue.longitude, query: "")
+        find_local_resturants(query: "")
     }
     
     // MARK: - IBAction Methods
     
     
     //Here I use the Yelp Fusion api to find all local resturants.
-    func find_local_resturants(lat:Double, long:Double,query:String){
+    func find_local_resturants(query:String){
         
-        let parameters: Parameters = [
-            "latitude": "\(lat)",
-            "longitude": "\(long)"
-        ]
-        
-        let headers = ["Authorization": "Bearer 90BuGMVOBsth1wAh124QXBbIGDGpf6fpwwas3pxoZ4iMYL4uc7974Ey5n4dIQ37qPLuA5YrxmzDTf6H1EjrCPNyljoNW4OMdAS_dQppnG3kIm0cYjufhwqYcLlPYW3Yx"]
-        
-        let url:String = "https://api.yelp.com/v3/businesses/search?&latitude=\(lat)&longitude=\(long)&term=resturant,\(query)&sort_by=distance"
-        
-        Alamofire.request(url, method: .get, parameters: parameters, encoding: JSONEncoding.default, headers: headers).responseJSON { response in
+        if let lat = location_manager.location?.coordinate.latitude, let long = location_manager.location?.coordinate.longitude {
             
-            //I parse the response JSON and create Resturant and Category objects.
-            if let json = response.result.value {
-                if let json_dict = json as? [String : Any] {
-                    if let resturants = json_dict["businesses"] as? [Dictionary<String,Any>] {
-                        self.resturants = []
-                        for resturant_dict in resturants {
-                            guard let name = resturant_dict["name"] as? String else {
-                                return
-                            }
-                            
-                            guard let image_url = resturant_dict["image_url"] as? String else {
-                                return
-                            }
-                            
-                            guard let distance = resturant_dict["distance"] as? Double else {
-                                return
-                            }
-                            
-                            //Because I use category information for not only display but for filtering I created a seperate array.
-                            var categories_array:[Category] = []
-                            for category in resturant_dict["categories"] as! [Dictionary<String,String>] {
-                               
-                                guard let alias = category["alias"] else {
-                                    return
-                                }
-                                guard let title = category["title"] else {
+            let parameters: Parameters = [
+                "latitude": "\(lat)",
+                "longitude": "\(long)"
+            ]
+            
+            let headers = ["Authorization": "Bearer 90BuGMVOBsth1wAh124QXBbIGDGpf6fpwwas3pxoZ4iMYL4uc7974Ey5n4dIQ37qPLuA5YrxmzDTf6H1EjrCPNyljoNW4OMdAS_dQppnG3kIm0cYjufhwqYcLlPYW3Yx"]
+            
+            let url:String = "https://api.yelp.com/v3/businesses/search?&latitude=\(lat)&longitude=\(long)&term=food,\(query)&sort_by=distance"
+            
+            Alamofire.request(url, method: .get, parameters: parameters, encoding: JSONEncoding.default, headers: headers).responseJSON { response in
+                
+                //I parse the response JSON and create Resturant and Category objects.
+                if let json = response.result.value {
+                    if let json_dict = json as? [String : Any] {
+                        if let resturants = json_dict["businesses"] as? [Dictionary<String,Any>] {
+                            self.resturants = []
+                            for resturant_dict in resturants {
+                                guard let name = resturant_dict["name"] as? String else {
                                     return
                                 }
                                 
-                                let category = Category.init(alias: alias, title: title)
-                                categories_array.append(category)
+                                guard let image_url = resturant_dict["image_url"] as? String else {
+                                    return
+                                }
                                 
-                                let had_category = self.categories.contains { element in
-                                    if case category.alias = element.alias {
-                                        return true
-                                    } else {
-                                        return false
+                                guard let distance = resturant_dict["distance"] as? Double else {
+                                    return
+                                }
+                                
+                                //Because I use category information for not only display but for filtering I created a seperate array.
+                                var categories_array:[Category] = []
+                                for category in resturant_dict["categories"] as! [Dictionary<String,String>] {
+                                    
+                                    guard let alias = category["alias"] else {
+                                        return
                                     }
+                                    guard let title = category["title"] else {
+                                        return
+                                    }
+                                    
+                                    let category = Category.init(alias: alias, title: title)
+                                    categories_array.append(category)
                                 }
                                 
-                                if had_category{
-                                    //Category Already there
-                                }else{
-                                    self.categories.append(category)
-                                }
-                                
+                                let resturant:Resturant = Resturant.init(name: name, image_url: image_url, categories: categories_array, distance: distance)
+                                self.resturants.append(resturant)
                             }
                             
-                            let resturant:Resturant = Resturant.init(name: name, image_url: image_url, categories: categories_array, distance: distance)
-                            self.resturants.append(resturant)
-                        }
-                        
-                        DispatchQueue.main.async{
-                            
-                            self.filtered_resturants = self.resturants
-                            self.resturant_tableview.reloadData()
+                            DispatchQueue.main.async{
+                                
+                                self.resturant_tableview.reloadData()
+                            }
                         }
                     }
                 }
             }
         }
-    }
-    
-    // This method filters the filtered_resturants array. Once an item is selected I check each resturants categories to see if it is included.
-    func filter_by_category(alias:String){
-        filtered_resturants = []
-        for resturant in resturants {
-            if let categories = resturant.categories {
-                for category in categories {
-                    if let cat_alias = category.alias {
-                        if cat_alias == alias {
-                            filtered_resturants.append(resturant)
-                        }
-                    }
-                }
-            }
-        }
-
-        resturant_tableview.reloadData()
     }
     
     //MARK: - UITableView Delegate Methods
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return filtered_resturants.count
+        return resturants.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let resturant_cell = tableView.dequeueReusableCell(withIdentifier: "ResturantCell", for: indexPath) as! ResturantCell
         
-        let resturant = filtered_resturants[indexPath.item]
+        let resturant = resturants[indexPath.item]
         
         if let name = resturant.name {
             resturant_cell.rest_name.text = name
@@ -237,18 +202,11 @@ class ResturantsVC: UIViewController, CLLocationManagerDelegate, UITableViewData
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         
-        guard let lat = location_manager.location?.coordinate.latitude else {
-            return
-        }
-        
-        guard let long = location_manager.location?.coordinate.longitude else {
-            return
-        }
-        
-        find_local_resturants(lat: lat, long: long, query: searchText)
     }
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        find_local_resturants(query: searchBar.text!)
+        
         self.dismissKeyboard()
     }
 }
