@@ -11,17 +11,15 @@ import MapKit
 import Alamofire
 import AlamofireImage
 
-class ResturantsVC: UIViewController, CLLocationManagerDelegate, UITableViewDataSource, UITableViewDelegate, UIPickerViewDelegate, UIPickerViewDataSource {
+class ResturantsVC: UIViewController, CLLocationManagerDelegate, UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate {
     
     var location_manager:CLLocationManager = CLLocationManager()
     var resturants:[Resturant] = []
     var categories:[Category] = []
     var filtered_resturants:[Resturant] = []
-    var is_showing:Bool = false
+    var tap_gesture:UITapGestureRecognizer!
     
     @IBOutlet var resturant_tableview:UITableView!
-    @IBOutlet var category_picker:UIPickerView!
-    @IBOutlet var category_constraint:NSLayoutConstraint!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,6 +34,32 @@ class ResturantsVC: UIViewController, CLLocationManagerDelegate, UITableViewData
             location_manager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
             location_manager.startUpdatingLocation()
         }
+        
+        let dismiss_selector : Selector = #selector(ResturantsVC.dismissKeyboard)
+        tap_gesture = UITapGestureRecognizer(target: self, action: dismiss_selector)
+        
+        tap_gesture.numberOfTapsRequired = 1
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(true)
+        
+        let notificationCenter = NotificationCenter.default
+        notificationCenter.addObserver(self, selector: #selector(ResturantsVC.keyboardWillShow(_:)), name: UIResponder.keyboardWillShowNotification, object: nil)
+        notificationCenter.addObserver(self, selector: #selector(ResturantsVC.keyboardWillHide(_:)), name: UIResponder.keyboardWillHideNotification, object: nil)
+    }
+    
+    @objc func keyboardWillShow(_ notificaton : Notification){
+        view.addGestureRecognizer(tap_gesture)
+    }
+    
+    @objc func keyboardWillHide(_ notificaiton : Notification){
+        view.removeGestureRecognizer(tap_gesture)
+        self.dismissKeyboard()
+    }
+    
+    @objc func dismissKeyboard(){
+        self.view.endEditing(true)
     }
 
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation])
@@ -45,47 +69,14 @@ class ResturantsVC: UIViewController, CLLocationManagerDelegate, UITableViewData
         location_manager.stopUpdatingLocation()
         
         //Once we have the users location we can use the Yelp API to find local resturants.
-        find_local_resturants(lat: locValue.latitude, long: locValue.longitude)
+        find_local_resturants(lat: locValue.latitude, long: locValue.longitude, query: "")
     }
     
     // MARK: - IBAction Methods
     
-    //Method used to animate the picker sliding up and down.
-    @IBAction func animate_picker(sender:Any){
-        if is_showing {
-            category_constraint.constant = -280
-            is_showing = false
-        }else{
-            category_constraint.constant = 0
-            is_showing = true
-        }
-        UIView.animate(withDuration: 1, delay: 0.0, options: .curveEaseInOut, animations: {
-            self.view.layoutIfNeeded()
-        }, completion: {
-            finished in
-            
-        })
-    }
-    
-    //Instead of using the UIPicker delegate method, I used a button to get the selected picker row.
-    @IBAction func select_category(sender:Any){
-        if let alias = categories[category_picker.selectedRow(inComponent: 0)].alias {
-            filter_by_category(alias: alias)
-        }
-    }
-    
-    //Method for reseting back to all local resturants
-    @IBAction func reset_category(sender:Any){
-        filtered_resturants = resturants
-        
-        resturant_tableview.reloadData()
-        
-        animate_picker(sender: self)
-    }
-    
     
     //Here I use the Yelp Fusion api to find all local resturants.
-    func find_local_resturants(lat:Double, long:Double){
+    func find_local_resturants(lat:Double, long:Double,query:String){
         
         let parameters: Parameters = [
             "latitude": "\(lat)",
@@ -94,7 +85,7 @@ class ResturantsVC: UIViewController, CLLocationManagerDelegate, UITableViewData
         
         let headers = ["Authorization": "Bearer 90BuGMVOBsth1wAh124QXBbIGDGpf6fpwwas3pxoZ4iMYL4uc7974Ey5n4dIQ37qPLuA5YrxmzDTf6H1EjrCPNyljoNW4OMdAS_dQppnG3kIm0cYjufhwqYcLlPYW3Yx"]
         
-        let url:String = "https://api.yelp.com/v3/businesses/search?&latitude=\(lat)&longitude=\(long)&term=resturants&sort_by=distance"
+        let url:String = "https://api.yelp.com/v3/businesses/search?&latitude=\(lat)&longitude=\(long)&term=resturant,\(query)&sort_by=distance"
         
         Alamofire.request(url, method: .get, parameters: parameters, encoding: JSONEncoding.default, headers: headers).responseJSON { response in
             
@@ -154,7 +145,6 @@ class ResturantsVC: UIViewController, CLLocationManagerDelegate, UITableViewData
                             
                             self.filtered_resturants = self.resturants
                             self.resturant_tableview.reloadData()
-                            self.category_picker.reloadAllComponents()
                         }
                     }
                 }
@@ -176,8 +166,6 @@ class ResturantsVC: UIViewController, CLLocationManagerDelegate, UITableViewData
                 }
             }
         }
-        
-        animate_picker(sender: self)
 
         resturant_tableview.reloadData()
     }
@@ -197,6 +185,8 @@ class ResturantsVC: UIViewController, CLLocationManagerDelegate, UITableViewData
             resturant_cell.rest_name.text = name
         }
         
+        resturant_cell.rest_imageeview.image = nil
+        
         //Normally I would subclass UIImageview for downloading images. It seems like overkill for this exercise.
         if let image_url = resturant.image_url {
             resturant_cell.rest_imageeview.layer.cornerRadius = 5
@@ -205,7 +195,9 @@ class ResturantsVC: UIViewController, CLLocationManagerDelegate, UITableViewData
             Alamofire.request(image_url).responseImage { response in
                 
                 if let image = response.result.value {
-                    resturant_cell.rest_imageeview.image = image
+                    DispatchQueue.main.async{
+                        resturant_cell.rest_imageeview.image = image
+                    }
                 }
             }
         }
@@ -241,22 +233,22 @@ class ResturantsVC: UIViewController, CLLocationManagerDelegate, UITableViewData
         return UITableView.automaticDimension
     }
     
-    // MARK: - UIPickerViewDataSource Methods
+    // MARK: - UISearchBarDelegate Methods
     
-    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         
-        return 1
-    }
-    
-    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return categories.count
-    }
-    
-    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return categories[row].title
-    }
-    
-    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        guard let lat = location_manager.location?.coordinate.latitude else {
+            return
+        }
         
+        guard let long = location_manager.location?.coordinate.longitude else {
+            return
+        }
+        
+        find_local_resturants(lat: lat, long: long, query: searchText)
+    }
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        self.dismissKeyboard()
     }
 }
